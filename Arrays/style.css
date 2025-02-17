@@ -34,7 +34,10 @@ header {
 
 .container {
   width: 100%;
-  height: 300px;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 700px;
+  min-height: 400px;
   background-color: white;
   box-shadow: 8px 8px 20px rgb(128, 128, 128);
   position: relative;
@@ -47,59 +50,92 @@ header {
 
 .container-btn {
   width: 100%;
+  height: 35px;
   display: flex;
   position: relative;
   bottom: 0;
   justify-content: center;
-  height: 30px;
+  list-style-type: none;
 }
 
-.container-btn button {
+.container-btn li {
   width: 15%;
   height: 100%;
   border: 0;
+  position: relative;
 }
 
-.container-btn button:hover {
-  background-color: rgb(125, 125, 125);
-  color: white;
+.container-btn input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
 }
 
-.container-btn button:focus {
-  background-color: grey;
+.container-btn input[type="radio"]:checked+label {
+  background: grey;
+}
+
+.container-btn label {
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.container-btn label:hover {
+  background-color: lightgray;
 }
 
 .container-body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background-color: aqua;
 }
 
 .chart {
+  flex-grow: 1;
   display: flex;
   align-items: end;
   width: 100%;
-  height: 230px;
   background-color: grey;
+  padding: 25px 30px 5px 30px;
 }
 
 .container-form {
   display: flex;
+  position: relative;
   width: 100%;
+  height: 50px;
   justify-content: center;
   gap: 5px;
   padding: 10px;
 }
 
 .container-form button {
-  width: 50px;
+  width: 70px;
   border-radius: 5px 0;
   border: 0;
 }
 
+.container-form button:hover {
+  background-color: lightgray;
+}
+
 .ele {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: center;
   background-color: white;
   border: 1px solid grey;
+}
+
+.ele-text {
+  position: relative;
+  top: -20px;
 }

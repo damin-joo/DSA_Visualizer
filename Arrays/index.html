@@ -12,21 +12,44 @@
     <p>Damin Joo</p>
   </header>
   <div class="container">
-    <div class="container-btn">
-      <button class="bub">Bubble</button>
-      <button class="sel">Selection</button>
-      <button class="ins">Insertion</button>
-      <button class="qui">Quick</button>
-      <button class="cou">Counting</button>
-      <button class="rad">Radix</button>
-      <button class="mer">Merge</button>
-    </div>
+    <ul class="container-btn">
+      <li>
+        <input type="radio" id="bub" class="bub" name="sort">
+        <label for="bub">Bubble</label>
+      </li>
+      <li>
+        <input type="radio" id="sel" class="sel" name="sort">
+        <label for="sel">Selection</label>
+      </li>
+      <li>
+        <input type="radio" id="ins" class="ins" name="sort">
+        <label for="ins">Insertion</label>
+      </li>
+      <li>
+        <input type="radio" id="qui" class="qui" name="sort">
+        <label for="qui">Quick</label>
+      </li>
+      <li>
+        <input type="radio" id="cou" class="cou" name="sort">
+        <label for="cou">Counting</label>
+      </li>
+      <li>
+        <input type="radio" id="rad" class="rad" name="sort">
+        <label for="rad">Radix</label>
+      </li>
+      <li>
+        <input type="radio" id="mer" class="mer" name="sort">
+        <label for="mer">Merge</label>
+      </li>
+    </ul>
     <div class="container-body">
       <div class="chart"></div>
       <div class="container-form">
-        <input class="num" type="number">
+        <button class="sample">Sample</button>
+        <input class="num" type="number" required>
         <button class="add">Add</button>
-        <button class="sort">Clear</button>
+        <button class="sort">Sort</button>
+        <button class="clr">Clear</button>
       </div>
     </div>
   </div>
