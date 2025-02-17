@@ -136,7 +136,23 @@ function selectionSort() {
 }
 
 function insertionSort() {
+  const dup = sorted.slice(0);
+  console.log("Before: ", sorted);
 
+  let delay = 0;
+
+  for (let j = 1; j < dup.length - 1; j++) {
+    let i = j - 1;
+    let key = Number(dup[j][0]);
+    while (i >= 0 && Number(dup[i][0]) > key) {
+      dup[i + 1] = dup[i];
+      --i;
+    }
+    dup[i + 1] = key;
+  }
+  setTimeout(() => {
+    console.log("Sorted:", dup);
+  }, delay);
 }
 
 function quickSort() {
